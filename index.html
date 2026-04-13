@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sortexa DSA Scheduler</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>⚡ DSA SCHEDULER – GOD MODE</h1>
+<p>DSA Used: Queue, Sorting, Priority Queue, Circular Queue</p>
+
+<div class="panel">
+<input id="pid" placeholder="Process ID">
+<input id="bt" placeholder="Burst Time">
+<input id="pr" placeholder="Priority">
+<button onclick="addProcess()">Add</button>
+</div>
+
+<select id="algo">
+<option value="fcfs">FCFS</option>
+<option value="sjf">SJF</option>
+<option value="priority">Priority</option>
+<option value="rr">Round Robin</option>
+</select>
+
+<input id="quantum" placeholder="Time Quantum (RR only)">
+
+<button onclick="run()">Run</button>
+
+<h3>Queue / Structure</h3>
+<div id="queueView"></div>
+
+<h3>Timeline</h3>
+<div id="timeline"></div>
+
+<div id="stats"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
