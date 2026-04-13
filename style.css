@@ -1,0 +1,54 @@
+body{
+ background:linear-gradient(135deg,#050817,#0a1f3c);
+ color:white;
+ text-align:center;
+ font-family:Arial;
+}
+
+h1{
+ text-shadow:0 0 20px cyan;
+}
+
+input{
+ padding:10px;
+ margin:5px;
+ border-radius:6px;
+ border:none;
+}
+
+button{
+ padding:10px;
+ margin:5px;
+ background:#1e90ff;
+ border:none;
+ border-radius:8px;
+ color:white;
+ box-shadow:0 0 10px cyan;
+}
+
+#queueView{
+ display:flex;
+ justify-content:center;
+ margin:20px;
+}
+
+.qitem{
+ padding:10px;
+ margin:5px;
+ border-radius:6px;
+ color:black;
+}
+
+#timeline{
+ display:flex;
+ justify-content:center;
+ margin-top:20px;
+}
+
+.block{
+ padding:15px;
+ margin:2px;
+ border-radius:5px;
+ color:black;
+ font-weight:bold;
+}
