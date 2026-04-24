@@ -1,11 +1,11 @@
-let processes=[];
+let processes=[]; //used as array to enter procceses//
 let colors=["#ff7675","#74b9ff","#55efc4","#ffeaa7","#a29bfe","#fd79a8"];
 
 function addProcess(){
  let pid=document.getElementById("pid").value;
  let bt=parseInt(document.getElementById("bt").value);
  let pr=parseInt(document.getElementById("pr").value);
-
+  //used as object in form of struct//
  processes.push({pid,bt,pr,color:colors[processes.length%colors.length]});
  renderQueue(processes);
 }
@@ -25,11 +25,11 @@ async function run(){
 
  document.getElementById("timeline").innerHTML="";
 
- if(algo==="sjf") arr.sort((a,b)=>a.bt-b.bt);
+ if(algo==="sjf") arr.sort((a,b)=>a.bt-b.bt); //here sorting takes place for sortest job first//
  if(algo==="priority") arr.sort((a,b)=>a.pr-b.pr);
 
  if(algo==="rr"){
-   roundRobin(arr);
+   roundRobin(arr); // use of circular queue function as it re enters ready state//
    return;
  }
 
@@ -61,7 +61,7 @@ async function roundRobin(arr){
 
  while(q.length){
   let p=q.shift();
-
+  //this q.shift is used as DEqueue as removing procces from ready queue//
   let exec=Math.min(p.bt,tq);
 
   await animate({...p,bt:exec});
